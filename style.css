@@ -383,7 +383,6 @@ body {
   background: #d99149;
   text-align: center;
   padding: 10px;
-  font-size: 20;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   border-radius: 10px;
@@ -396,27 +395,68 @@ body {
   width: 100%;
   height: 5vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 15px;
   font-family: "Raleway", sans-serif;
-}
-
-.footer__desc {
-  font-size: 20px;
 }
 
 .footer__cora {
   color: red;
 }
 
-.footer__redes {
-  display: flex;
-  gap: 30px;
+.slider {
+  display: none;
 }
-
-.footer__link {
-  text-decoration: none;
-  color: #e0c494;
-  font-size: 20px;
+@media (width <= 800px) {
+  .galeria {
+    display: none;
+  }
+  .galeria__title {
+    text-align: center;
+  }
+  .galeria__slogan {
+    padding: 0 18px;
+    text-align: center;
+  }
+  .slider {
+    aspect-ratio: 10/16;
+    width: 277px;
+    position: relative;
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .slider__img {
+    width: 100%;
+    left: 0;
+    position: sticky;
+    object-fit: cover;
+    border-radius: 5px;
+    scroll-snap-align: center;
+  }
+  .nosotros__img {
+    display: none;
+  }
+  .nosotros__cuadro {
+    display: none;
+  }
+  .nosotros__about {
+    padding: 0 18px;
+    font-size: 18px;
+  }
+  .servicios__info[open] {
+    width: 80%;
+  }
+  .servicios__contacto {
+    width: 33%;
+  }
+  .servicios__objetivo {
+    font-size: 18px;
+    padding: 0 18px;
+    text-align: center;
+  }
+  .footer-container {
+    height: 12vh;
+  }
 }
